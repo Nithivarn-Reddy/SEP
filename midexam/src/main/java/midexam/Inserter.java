@@ -14,6 +14,7 @@ public class Inserter {
 		  } 
 		  
 		  return l;
+		  
 		 }
 	
 	 public ArrayList<String> createAlpha() {
