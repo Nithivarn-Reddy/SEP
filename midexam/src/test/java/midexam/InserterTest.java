@@ -21,15 +21,21 @@ public class InserterTest {
 	  int actual = l.size();
 	  assertEquals(actual, expected);
 	 }
-	 @Test
+	@SuppressWarnings("null")
+	@Test
 	 // get a list of letters from the alp..
 	 // these letters should be small
 	 public void testCreateAlpha() {
 	  ArrayList<String> alpha = inserter.createAlpha();
-	  String a = alpha.get(0);
-	  String expected = "a";
+	  String[] alphabets=new String[alpha.size()];
+	  String[] expected = new String[26];
+	  for(int index =0 ;index<26;++index)
+	  {
+		  expected[index]=Character.toString((char)(97+index));
+		  alphabets[index]=alpha.get(index);
+	  }
 	  
-	  assertEquals(a, expected);
+	  assertArrayEquals(expected, alphabets);
 	  
 	 }
 

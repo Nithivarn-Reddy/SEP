@@ -21,11 +21,13 @@ public class Inserter {
 		 
 		  ArrayList<String> x = new ArrayList<String>();
 		  for(int index = 0; index < 26; ++index) {
-		   String str = "a";
-		   x.add(str);
+			  char c = (char)(97+index);
+			  x.add(Character.toString(c));
 		  }
 		  return x;
 		 }
+	 
+	 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
